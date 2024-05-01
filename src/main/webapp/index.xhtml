@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+    </h:head>
+
+    <h:body>
+        
+        
+        <p:panelGrid columns="2">
+            <h:outputText value="#{jsfController.txt}" />
+
+            <h:form>
+                <h:commandButton action="#{jsfController.generate()}" value="Generate"/><br/>
+                <h:commandButton action="#{jsfController.doCreate()}" value="Save"/><br/>
+                <h:commandLink action="#{jsfController.generate()}" value="Generate"/>
+        </h:form>
+        </p:panelGrid>
+        <h:link outcome="zweite.xhtml" value="Zur zweiten Seite" />
+    </h:body>
+</html>
+
